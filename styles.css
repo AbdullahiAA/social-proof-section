@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 2;
+  font-family: 'Spartan', sans-serif;
+}
+
+body {
+  height: 100%;
+}
+
+body::before {
+  content: url("./images/bg-pattern-top-desktop.svg");
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+body::after {
+  content: url("./images/bg-pattern-bottom-desktop.svg");
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 95%;
+  z-index: 99;
+}
+
+.container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 30px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.row.one {
+  gap: 150px;
+  margin-top: 100px;
+  margin-bottom: 35px;
+}
+
+.row.one .intro {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.row.one .intro .intro__container {
+  width: 90%;
+}
+
+.row.one .intro .intro__container h1 {
+  font-weight: 700;
+  font-size: 45px;
+  color: #502050;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  letter-spacing: .3px;
+}
+
+.row.one .intro .intro__container p {
+  color: #937b92;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.row.one .ratings {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.row.one .ratings .rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  width: 82%;
+  padding: 15px 25px;
+  border-radius: 8px;
+  background-color: #f7f2f7;
+}
+
+.row.one .ratings .rating p {
+  color: #502050;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .2px;
+}
+
+.row.one .ratings .rating.two {
+  margin-left: 9%;
+}
+
+.row.one .ratings .rating.three {
+  margin-left: 18%;
+}
+
+.row.one .ratings .rating .stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.row.one .ratings .rating .stars img {
+  width: 12px;
+  height: 12px;
+}
+
+.row.two {
+  gap: 30px;
+}
+
+.row.two .card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #502050;
+  padding: 40px 30px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.row.two .card.one {
+  margin-bottom: 40px;
+}
+
+.row.two .card.two {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.row.two .card.three {
+  margin-top: 40px;
+}
+
+.row.two .card .card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.row.two .card .card__header .card__profile {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+}
+
+.row.two .card .card__header .card__profile img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.row.two .card .card__header .card__info h4 {
+  letter-spacing: .3px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 3px;
+}
+
+.row.two .card .card__header .card__info p {
+  color: #ee68a4;
+  font-weight: 200;
+  font-size: 15px;
+}
+
+.row.two .card .card__body p {
+  color: #f7f2f7;
+  font-size: 14px;
+  line-height: 1.5;
+}
+/*# sourceMappingURL=styles.css.map */
