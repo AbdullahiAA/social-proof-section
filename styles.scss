@@ -14,27 +14,36 @@ $White: hsl(0, 0%, 100%);
 }
 
 body {
-    height: 100%;
+    position: relative;
 }
 
-body::before {
-    content: url("./images/bg-pattern-top-desktop.svg");
-    z-index: 1;
-    position: absolute;
+.bg-pattern-top, .bg-pattern-bottom {
+    overflow: hidden;
+    pointer-events: none;
+    
+    img {
+        position: absolute;
+        max-width: 100%;
+        
+        &.mobile {
+            display: none;
+        }
+    }
+}
+
+.bg-pattern-top img {
     top: 0;
     left: 0;
 }
 
-body::after {
-    content: url("./images/bg-pattern-bottom-desktop.svg");
-    z-index: 1;
-    position: absolute;
+.bg-pattern-bottom img {
     bottom: 0;
     right: 0;
 }
 
 .container {
     max-width: 1440px;
+    min-height: calc(100vh - 100px);
     margin: 0 auto;
     width: 95%;
     z-index: 99;
@@ -187,6 +196,168 @@ body::after {
                 color: $lightGrayishMagenta;
                 font-size: 14px;
                 line-height: 1.5;
+            }
+        }
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media (max-width: 900px) {
+    .container {
+        width: 98%;
+
+        .row {
+            width: 96%;
+        }
+    }
+
+    .row.one {
+        gap: 70px;
+
+        .intro .intro__container h1 {
+            font-size: 40px;
+        }
+        
+        .ratings .rating {
+            padding: 10px 15px;
+            gap: 10px;
+
+            p {
+                font-size: 10px;
+            }
+
+            .stars {
+                gap: 3px;
+                
+                img {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+    }
+
+    .row.two {
+        gap: 15px;
+
+        .card {   
+            padding:25px 20px;
+
+            .card__header {
+                gap: 15px;
+
+                .card__profile {
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+
+            .card__info {
+                h4 {
+                    font-size: 15px;
+                }
+                p {
+                    font-size: 10px !important;
+                }
+            }
+        }
+
+        .card__body {
+            p {
+                font-size: 12px !important;
+            }
+        }
+    }  
+}
+
+@media (max-width: 540px) {
+    .bg-pattern-top, .bg-pattern-bottom {
+        img {
+            &.desktop {
+                display: none;
+            }
+            &.mobile {
+                display: block;
+            }
+        }
+    }
+
+    .container {
+        .row {
+            flex-direction: column;
+            padding: 10px;
+            width: 100%;
+        }
+    }
+
+    .row.one {
+        .intro {
+            .intro__container {
+                width: 100%;
+                text-align: center;
+
+                h1 {
+                    margin-bottom: 30px;
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .ratings {
+            .rating {
+                flex-direction: column;
+                margin: 0 !important;
+                width: 100% !important;
+
+                p {
+                    font-size: 14px;
+                    text-align: center;
+                }
+
+                .stars {
+                    gap: 6px;
+                    
+                    img {
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .row.two {
+        .card {
+            margin: 0 !important;
+            padding: 40px 30px;
+
+            .card__header {
+                gap: 20px;
+    
+                .card__profile {
+                    width: 50px;
+                    height: 50px;
+                }
+    
+                .card__info {
+                    p {
+                        font-size: 13px !important;
+                    }
+                }
+            }
+
+            .card__body p {
+                font-size: 14px !important;
             }
         }
     }
